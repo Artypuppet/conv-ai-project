@@ -50,12 +50,12 @@ conv-ai-project/
 
 ## Getting Started
 
-### On Google Colab (for submission)
+### For Graders: Running on Google Colab
 
 Open `notebooks/main.ipynb` in Colab. The first cell clones the repo and installs dependencies:
 
 ```python
-git clone https://github.com/YOUR_USERNAME/conv-ai-project.git /content/conv-ai-project
+git clone https://github.com/ArtyPuppet/conv-ai-project.git /content/conv-ai-project
 %cd /content/conv-ai-project
 %pip install -r requirements-colab.txt -q
 ```
@@ -71,7 +71,7 @@ SKIP_MODEL_REQUIRED_CELLS = True
 
 For quick grading, keep these defaults. The notebook uses committed caches and skips the cells that require loading Llama. To fully reproduce the dataset generation, feature extraction, and live attention-map trace, set `RUN_FROM_SCRATCH = True` and `SKIP_MODEL_REQUIRED_CELLS = False`.
 
-Full reproduction requires a Hugging Face token with access to `meta-llama/Llama-3.2-1B`:
+Full reproduction requires a Hugging Face account that has accepted the Meta Llama license agreement for `meta-llama/Llama-3.2-1B`. In Colab, log in with a Hugging Face access token before running the model-dependent cells:
 
 ```python
 from huggingface_hub import login
@@ -81,8 +81,8 @@ login()
 ### Local development (for me it was RTX 3050 4GB on a laptop)
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/conversational-ai.git
-cd conversational-ai/conv-ai-project
+git clone https://github.com/ArtyPuppet/conv-ai-project.git
+cd conv-ai-project
 bash setup.sh
 ```
 
