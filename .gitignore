@@ -1,0 +1,89 @@
+# Data and outputs (downloaded/generated at runtime)
+data/*
+!data/.gitkeep
+outputs/*
+!outputs/.gitkeep
+!outputs/attention_features_train.pt
+!outputs/attention_features_val.pt
+!outputs/attention_features_test.pt
+!outputs/hidden_states_train.pt
+!outputs/hidden_states_val.pt
+!outputs/hidden_states_test.pt
+!outputs/logit_features_train.pt
+!outputs/logit_features_val.pt
+!outputs/logit_features_test.pt
+!outputs/classifier_metrics.json
+!outputs/gated_sweep_results.json
+!outputs/gated_validation_losses.json
+!outputs/xgboost_probe.joblib
+!outputs/lapeigvals_probe.joblib
+!outputs/gated_fusion_probe.pt
+!outputs/gated_fusion_tuned_state.pt
+!outputs/figures/
+!outputs/figures/**
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# PyTorch artifacts
+*.pt
+*.pth
+*.bin
+*.safetensors
+!data/train.pt
+!data/val.pt
+!data/test.pt
+!outputs/attention_features_train.pt
+!outputs/attention_features_val.pt
+!outputs/attention_features_test.pt
+!outputs/hidden_states_train.pt
+!outputs/hidden_states_val.pt
+!outputs/hidden_states_test.pt
+!outputs/logit_features_train.pt
+!outputs/logit_features_val.pt
+!outputs/logit_features_test.pt
+!outputs/gated_fusion_probe.pt
+!outputs/gated_fusion_tuned_state.pt
+
+# NumPy artifacts
+*.npz
+*.npy
+
+
+# IDE
+.vscode/
+.idea/
+.cursor/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# Weights & Biases
+wandb/
+
+# HuggingFace cache (if stored locally in project)
+.cache/
+
+# Misc
+*.log
+*.tmp
+
+# References
+references/

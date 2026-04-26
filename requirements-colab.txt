@@ -1,0 +1,16 @@
+# Colab already ships with a CUDA-compatible PyTorch stack.
+# Do not reinstall torch from the local CUDA wheel index here.
+
+transformers>=5.0.0
+accelerate>=1.0.0
+bitsandbytes>=0.45.0
+nnsight>=0.3.0
+datasets>=3.0.0
+scikit-learn>=1.5.0
+xgboost>=2.0.0
+numpy>=1.26.0
+pandas>=2.1.0
+scipy>=1.13.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+tqdm>=4.66.0

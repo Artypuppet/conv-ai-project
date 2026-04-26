@@ -1,0 +1,36 @@
+# PyTorch: use the wheel index that matches `nvidia-smi` → "CUDA Version" (driver max), not `nvcc`.
+# Detected on dev host: 13.0 → cu130. For 12.8 / 12.6 / 12.4 use cu128 / cu126 / cu124 instead.
+# https://pytorch.org/get-started/locally/
+--extra-index-url https://download.pytorch.org/whl/cu130
+
+# Core ML framework
+torch>=2.4.0
+transformers>=5.0.0
+accelerate>=1.0.0
+bitsandbytes>=0.45.0
+
+# Mechanistic interpretability
+nnsight>=0.3.0
+
+# Datasets
+datasets>=3.0.0
+
+# Classical ML
+scikit-learn>=1.5.0
+xgboost>=2.0.0
+
+# Numerical / data
+numpy>=1.26.0
+pandas>=2.1.0
+scipy>=1.13.0
+
+# Visualization
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Utilities
+tqdm>=4.66.0
+
+# Code quality (dev only, not needed on Colab)
+black>=24.0.0
+flake8>=7.0.0
