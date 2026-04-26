@@ -50,14 +50,14 @@ conv-ai-project/
 
 ## Getting Started
 
-### On Google Colab (recommended for submission)
+### On Google Colab (for submission)
 
 Open `notebooks/main.ipynb` in Colab. The first cell clones the repo and installs dependencies:
 
 ```python
-!git clone https://github.com/YOUR_USERNAME/conv-ai-project.git
--ai-project
-!pip install -r requirements-colab.txt -q
+git clone https://github.com/YOUR_USERNAME/conv-ai-project.git /content/conv-ai-project
+%cd /content/conv-ai-project
+%pip install -r requirements-colab.txt -q
 ```
 
 Select a GPU runtime: **Runtime > Change runtime type > T4 GPU**.
@@ -78,7 +78,7 @@ from huggingface_hub import login
 login()
 ```
 
-### Local development (RTX 3050 4GB)
+### Local development (for me it was RTX 3050 4GB on a laptop)
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/conversational-ai.git
