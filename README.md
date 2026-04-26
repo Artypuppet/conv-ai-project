@@ -101,9 +101,9 @@ The code automatically detects the available GPU and applies 4-bit quantization.
 
 All experiments use a fixed random seed (default: 42) pinned across `torch`, `numpy`, `random`, and `transformers`. Results are reproducible by running `notebooks/main.ipynb` end-to-end. By default, the notebook loads committed cached artifacts and prints when it is using caches. If `RUN_FROM_SCRATCH = True`, it regenerates the dataset, features, and classifier outputs through the project modules.
 
-## Attribution
+## Use of AI Assistance
 
-This project was completed as part of the Conversational AI course (Winter 2026). Code attribution is documented in function docstrings via `Origin:` tags -- each function is marked as either `Original` or `Adapted from [source]`.
+LLM tools were used near the end of the project to help clean up the repository, improve notebook organization, check for stale files and naming inconsistencies, and make the submission easier to run and grade. The project idea, experimental design, implementation choices, analysis, and final interpretation remain my own responsibility. I reviewed the AI-assisted edits before submission.
 
 ## Project Guidelines
 

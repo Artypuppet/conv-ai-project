@@ -1187,5 +1187,5 @@
     0.75500096102071,
     0.7935901204260384
   ],
-  "state_path": "/home/artypuppet/conversational-ai/conv-ai-project/outputs/phase3_gated_state_tuned.pt"
+  "state_path": "outputs/gated_fusion_tuned_state.pt"
 }

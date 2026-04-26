@@ -10,28 +10,7 @@ def tokenize_qa(
     tokenizer: PreTrainedTokenizer,
     max_len: int = 512,
 ) -> torch.Tensor:
-    """Tokenize a single formatted QA string.
-
-    Format matches later extraction: Question / Answer on two lines.
-
-    Arguments
-    ---------
-    question, answer : str
-        Raw strings.
-    tokenizer : PreTrainedTokenizer
-        Same tokenizer as the LM.
-    max_len : int
-        Truncation length (default 512).
-
-    Returns
-    -------
-    torch.Tensor
-        `input_ids` with shape (1, seq_len).
-
-    Origin
-    ------
-    Original.
-    """
+    """Tokenize the Question / Answer text used by extraction."""
     text = f"Question: {question}\nAnswer: {answer}"
     enc = tokenizer(
         text,
@@ -43,24 +22,7 @@ def tokenize_qa(
 
 
 def compute_f1(prediction: str, reference: str) -> float:
-    """Token-set F1 (whitespace split, case folded).
-
-    Empty prediction or reference gives 0.0.
-
-    Arguments
-    ---------
-    prediction, reference : str
-        Model output vs a single reference string.
-
-    Returns
-    -------
-    float
-        F1 in [0, 1].
-
-    Origin
-    ------
-    Original.
-    """
+    """Token-set F1 using lowercased whitespace tokens."""
     if not prediction.strip() or not reference.strip():
         return 0.0
     pr = set(prediction.lower().split())
